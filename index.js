@@ -1,12 +1,14 @@
 const fs = require('fs')
-const SSL_KEY = fs.readFileSync('./certificate/keytmp.pem')
-const SSL_CERT = fs.readFileSync('./certificate/cert.cert')
 const https = require('https')
+const data = require('./data.json')
+
+const SSL_KEY = fs.readFileSync('./certificate/localhost.key')
+const SSL_CERT = fs.readFileSync('./certificate/localhost.crt')
 const port = 3000
 
 const express = require('express')
 const app = express()
-const data = require('./data.json')
+
 
 const getCurrentUser = ({ headers }) => {
   return headers['mock-logged-in-as'] ||
