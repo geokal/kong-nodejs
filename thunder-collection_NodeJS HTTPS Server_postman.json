@@ -1,0 +1,33 @@
+{
+    "info": {
+        "_postman_id": "582ecabc-558f-41bb-92a7-f0884ac0c8b4",
+        "name": "NodeJS HTTPS Server",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "https://localhost:3000/stepcounts",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "https://localhost:3000/stepcounts",
+                    "path": [
+                        "stepcounts"
+                    ],
+                    "protocol": "https",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "header": [
+                    {
+                        "key": "mock-logged-in-as",
+                        "value": "Clark"
+                    }
+                ]
+            }
+        }
+    ]
+}
